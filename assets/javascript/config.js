@@ -9,11 +9,11 @@ var settings = {
 		"x-rapidapi-key": "a319d638b0msh397c0e24b21a62fp1a2660jsnc7f7e0f81537"
 	}
 }
-//API for UTELLY//
+
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
-
+//API for UTELLY//
 var settings = {
 	"async": true,
 	"crossDomain": true,
@@ -27,11 +27,12 @@ var settings = {
 
 // firbase api key = AIzaSyAk004XAQvVJd9_QkxKWBR3XaGo8y_623w //
 
-//API for MOVIE CLIPS//
+
 $.ajax(settings).done(function (response) {
 	console.log(response);
 });
 
+//API for MOVIE CLIPS//
 var settings = {
 	"async": true,
 	"crossDomain": true,
