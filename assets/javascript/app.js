@@ -16,27 +16,29 @@
 // });
 
 
-const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=&country=us'
-        const options = {
-        method: 'GET',
-        headers: {
+var queryURL  = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=&country=us'
+const options = {
+    method: 'GET',
+    headers: {
         "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-	    "x-rapidapi-key": "dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502"
-        },
+        "x-rapidapi-key": "dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502"
+    },
 }
-         fetch(url, options)
-        .then((response) => {
+fetch(url, options)
+    .then((response) => {
         return response.json();
     })
-        .then((myJson) => {
+    .then((myJson) => {
         console.log(myJson);
         $("#movie-view").text(JSON.stringify(myJson));
-  });
+    });
 
-$("#submit").on("click", function(){
+$("#submit").on("click", function () {
     event.preventDefault();
 
 })
+
+
 
 var userSearch = "";
 var movieTitle = "";
@@ -46,7 +48,7 @@ var movieArray = [];
 
 var page = {
 
-    
+
     // Functions
 
     resetSearch: function () {
@@ -65,7 +67,6 @@ var page = {
         console.log();
     }
 
-    
+
 
 }
-
