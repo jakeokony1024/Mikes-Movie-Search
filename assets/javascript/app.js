@@ -1,6 +1,6 @@
 
 //firebase calling
-var firebaseConfig = {
+var config = {
     apiKey: "AIzaSyCGYhdtL7ScaEYcZwM31u3L-A5GWEdgkG4",
     authDomain: "mikes-movies.firebaseapp.com",
     databaseURL: "https://mikes-movies.firebaseio.com",
@@ -8,12 +8,16 @@ var firebaseConfig = {
     storageBucket: "mikes-movies.appspot.com"
 };
 
-firebase.initializeApp(firebaseConfig)
-var database = firebase.database()
-var searchResults = "";
+firebase.initializeApp(config);
+var database = firebase.database();
+var searchResults = {
+    response: utellyResp,
+    name: name,
+    display_name: display_name,
+    locations: locations,
+    picture: picture
+}
 
-
-
-$(document).ready(function(){
-	$("#searchResults").
+$(document).on("ready", function(){
+	console.log(searchResults)
 })

@@ -1,9 +1,9 @@
 //Jquery function
 $(document).ready(function () {
     console.log("ready!");
-});
 
-var streamers = [];
+
+var utellyResp;
 // This .on("click") function will trigger the AJAX Call
 $("#find-movie").on("click", function (event) {
     // event.preventDefault() can be used to prevent an event's default behavior.
@@ -71,11 +71,11 @@ var searchResults = {
     locations: locations,
     picture: picture
 }
-$("#find-movie").on("click", function() {
+$("<a href>").on("click", function() {
     database.ref().set({
       searchResults: searchResults
     });
   });
 
-
+});
 //================================================================================================================================     
