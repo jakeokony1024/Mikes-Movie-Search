@@ -5,6 +5,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     text-align: center;
+    font-family: 'Oswald', sans-serif;
   }
   
   
@@ -35,16 +36,22 @@ body {
   
   #input{
     color:rgb(241, 207, 14);
-  font-size: 24px;
+    font-size: 24px;
   }
   
   #movie-view{
     color: aliceblue;
+    text-align: center;
   }
   
   img{
    
     max-height: 100px ;
+    margin: auto;
+  }
+
+  ul{
+    text-align: center;
   }
 
   #find-movie {
