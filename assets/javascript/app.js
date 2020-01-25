@@ -19,5 +19,5 @@ var searchResults = {
 }
 
 $(document).on("ready", function(){
-	console.log(searchResults)
+	$("#searchResults").html(searchResults);
 })
