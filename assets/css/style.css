@@ -60,3 +60,8 @@ position: absolute;
 top:630px;
 
 }
+
+#find-movie {
+  color: #fff;
+  background-color: goldenrod;
+}
