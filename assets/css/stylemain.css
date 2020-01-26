@@ -46,3 +46,10 @@ body {
    
     max-height: 100px ;
   }
+  
+  p{
+    width: 180px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }
