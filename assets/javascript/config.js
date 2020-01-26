@@ -26,7 +26,8 @@ $('#find-movie').on("click", function (event) {
     var movie = $("#movie-input").val().trim();
     console.log("This is the movie: " + movie);
     database.ref().push({
-        searchResults:movie
+        searchResults:movie,
+        dateAdded: firebase.database.ServerValue.TIMESTAMP
     });
     // $("#movie-input").empty(); //clears out the div
     const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' + movie + '&country=us'
