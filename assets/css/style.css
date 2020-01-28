@@ -53,6 +53,8 @@ h1 {
     color: red;
     margin: auto 0;
   position: relative;
+  background-color: transparent;
+  border-color: transparent;
   }
 
 .image{
@@ -65,3 +67,26 @@ top:630px;
   color: #fff;
   background-color: goldenrod;
 }
+
+@media screen and (max-width: 640px){
+  
+
+  body {
+    background: url(../Images/media-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .enter {
+    margin: 20px;
+  }
+
+}
+
+
