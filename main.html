@@ -10,8 +10,8 @@
     <!-- link to bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <!-- link to google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye&display=swap" rel="stylesheet">
+    <!-- link to google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye|Anton&display=swap" rel="stylesheet">
     <!-- link to css stylesheet -->
     <link rel="stylesheet" type="text/css" href="./assets/css/stylemain.css">
     <!-- links to firebase -->
@@ -23,19 +23,21 @@
 <body>
     <div id="container">
         <h1 class="neon"> Mike's Movie Search</h1>
-    
-       
-<!-- This form will be where users input data about the movies -->
-<form id="movie-form">
-    <label for="movie-input" id="input">Search for a TV Show Or Movie</label>
-    <input type="text" id="movie-input">
-    <!-- This button will trigger our AJAX call -->
-    <input id="find-movie" type="submit" value="Search">
-  </form>
-  <!-- We'll be dumping our JSON contents in here -->
-  <div id="movie-view"></div>
 
-        
+
+        <!-- This form will be where users input data about the movies -->
+        <form id="movie-form">
+            <label for="movie-input" id="input">Search for a TV Show Or Movie</label>
+            <input type="text" id="movie-input">
+            <!-- This button will trigger our AJAX call -->
+            <input id="find-movie" type="submit" value="Search">
+        </form>
+        <!-- We'll be dumping our JSON contents in here -->
+        <div class="container">
+            <div id="movie-view"></div>
+        </div>
+
+
 
     </div>
 
@@ -43,9 +45,9 @@
 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
      <script type="text/javascript" src="./assets/javascript/config.js"></script>
-    
-    
-    
+
+
+
 
 
 </body>

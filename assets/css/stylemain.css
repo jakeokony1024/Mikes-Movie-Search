@@ -5,6 +5,8 @@ body {
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
+  font-family: 'Anton', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 
@@ -17,6 +19,7 @@ h1 {
     font-size: 90px;
     letter-spacing: 4px;
     color:rgb(241, 207, 14);
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     
     }
     .neon{
@@ -42,9 +45,19 @@ font-size: 24px;
   color: aliceblue;
 }
 
+#find-movie {
+  background-color: black;
+  border-color: black;
+  color: goldenrod;
+}
+
 img{
  
   max-height: 100px ;
+  display: inline;
+  display: block;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 
 p{
@@ -52,4 +65,36 @@ p{
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 640px){
+  body {
+    background: url(../Images/media-background.jpg);
+    background-size: 100%;
+    background-repeat: initial;
+  
+  }
+
+  .neon {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    display: list-item;
+    
+    
+  }
+
+  #movie-view {
+    margin: auto;
+    width: 50%;
+  }
+
+  .movieDiv {
+    
+    clear: both;
+    overflow: auto;
+    text-align: center;
+  }
 }
