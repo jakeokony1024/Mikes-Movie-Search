@@ -54,9 +54,9 @@ $(document).ready(function () {
 
                 //Testing -Console logs to deteremine where the data fields we want are            
                    console.log(utellyResp);
-                //   console.log(utellyResp.results);
-                //   console.log(utellyResp.results[0].name);
-                //   console.log(utellyResp.results[0].locations[0].display_name);
+                  console.log(utellyResp.results);
+                   console.log(utellyResp.results[0].name);
+                   console.log(utellyResp.results[0].locations[0].display_name);
 
                 //Loop through to get movie name
                 for (i = 0; i < utellyResp.results.length; i++) {
