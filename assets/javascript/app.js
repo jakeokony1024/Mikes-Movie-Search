@@ -7,7 +7,6 @@ var config = {
 };
 firebase.initializeApp(config);
 var database = firebase.database();
-
 var utellyResp;
 var display_name;
 var locations;

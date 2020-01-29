@@ -31,7 +31,6 @@ $(document).ready(function () {
         //Geting the value of text entered in  the input box 
         var movie = $("#movie-input").val().trim();
         console.log("This is the movie: " + movie);
-
         //Utelly API call to get the show that was searched for to see where it's streaming    
         const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' + movie + '&country=us'
         const options = {
@@ -54,10 +53,10 @@ $(document).ready(function () {
                     console.log(utellyResp.results[0].name);
                     console.log(utellyResp.results[0].locations[0].display_name);
 
+
                 //Loop through to get movie name
                 for (i = 0; i < utellyResp.results.length; i++) {
                     //console.log(utellyResp.results[i].name);
-                    
                     var movieDiv = $("<div>"); //Jquery to make a Movie Div
                     movieDiv.addClass("movieDiv float-left"); //Adding Bootstrap Class to position images
                     var name = utellyResp.results[i].name; //Loop through UTELLY Json to get movie name 
@@ -67,6 +66,7 @@ $(document).ready(function () {
                     link = $("<a>");
                     link.attr("href", "movie.html");
                     link.addClass("link");
+                  //p tag added value
                     p.attr("value", name);
                     p.addClass("p-movieName")
                     link.addClass("rounded"); //Adds Bootstrap class to round edges of image   
@@ -76,7 +76,6 @@ $(document).ready(function () {
                     link.append(movieDiv);
                     $("#movie-view").append(link); // Appends the DIv to the movie-view section of HTML   
                     
-
                     var tempObject = {
                         searchResults: movie,
                         moviename: name,
@@ -96,7 +95,6 @@ $(document).ready(function () {
                     console.log(provider);
                 }
             });
-            
     });
     //================================================================================================================================    
     //End tag for Document.Ready

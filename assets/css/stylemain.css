@@ -1,55 +1,63 @@
-body { 
-    background: url(../Images/Capture.JPG) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    text-align: center;
-  }
-  
-  
-  h1 {
-      /* font-family: 'Rye', cursive;*/
-      font-family: 'Limelight', cursive;
-      /*font-family: 'Bungee Shade', cursive;*/
-      position: relative;
-      text-transform: uppercase;
-      font-size: 90px;
-      letter-spacing: 4px;
-      color:rgb(241, 207, 14);
-      
-      }
-      .neon{
-      color: #fff;
-      text-shadow:
-        0 0 5px #fff,
-        0 0 10px #fff,
-        0 0 20px #fff,
-        0 0 40px #fffb00,
-        0 0 80px #fffb00,
-        0 0 90px #fffb00,
-        0 0 100px #fffb00,
-        0 0 125px #fffb00;
-      }
-  
-  
-  #input{
-    color:rgb(241, 207, 14);
+body {
+  background: url(../Images/Capture.JPG) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
+
+}
+
+/*Formats the MIKES MOVIE SEARCH H1*/
+h1 {
+  /* font-family: 'Rye', cursive;*/
+  font-family: 'Limelight', cursive;
+  /*font-family: 'Bungee Shade', cursive;*/
+  position: relative;
+  text-transform: uppercase;
+  font-size: 90px;
+  letter-spacing: 4px;
+  color: rgb(241, 207, 14);
+
+}
+/*Formats the MIKES MOVIE SEARCH H1*/
+.neon {
+  color: #fff;
+  text-shadow:
+    0 0 5px #fff,
+    0 0 10px #fff,
+    0 0 20px #fff,
+    0 0 40px #fffb00,
+    0 0 80px #fffb00,
+    0 0 90px #fffb00,
+    0 0 100px #fffb00,
+    0 0 125px #fffb00;
+}
+
+/*The text Search for a "TV Show Or Movie"*/
+#input {
+  color: rgb(241, 207, 14);
   font-size: 24px;
-  }
-  
-  #movie-view{
-    color: aliceblue;
-  }
-  
-  img{
-   
-    max-height: 100px ;
-  }
-  
-  p{
-    width: 180px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-  }
+}
+/*Div that will display the movie image and name*/
+#movie-view {
+  color: aliceblue;
+
+}
+/*Movie Img displayed in the movie #movie view div*/
+img {
+  clear: both;
+  max-height: 100px;
+  margin-right: 5px;
+}
+/*Img name displayed in the movie #movie view div*/
+p {
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #fffb00;
+}
+.container{
+  width: 960px;
+}
