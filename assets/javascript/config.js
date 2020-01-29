@@ -1,4 +1,3 @@
-
 //Jquery Document.Ready function
 $(document).ready(function () {
     console.log("ready!");
@@ -10,6 +9,8 @@ $(document).ready(function () {
     var name;
     var picture;
     var provider;
+    var movName;
+    var pushArray = [];
 
     // Configure the Fireabase Database
     var config = {
@@ -30,13 +31,6 @@ $(document).ready(function () {
         //Geting the value of text entered in  the input box 
         var movie = $("#movie-input").val().trim();
         console.log("This is the movie: " + movie);
-
-        //Pushing the movie and date added to the Firebase Database
-        database.ref().push({
-            searchResults: movie,
-            dateAdded: firebase.database.ServerValue.TIMESTAMP
-        });
-
         //Utelly API call to get the show that was searched for to see where it's streaming    
         const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' + movie + '&country=us'
         const options = {
@@ -54,10 +48,11 @@ $(document).ready(function () {
                 utellyResp = (myJson);
 
                 //Testing -Console logs to deteremine where the data fields we want are            
-                   console.log(utellyResp);
-                  console.log(utellyResp.results);
-                   console.log(utellyResp.results[0].name);
-                   console.log(utellyResp.results[0].locations[0].display_name);
+                    console.log(utellyResp);
+                    console.log(utellyResp.results);
+                    console.log(utellyResp.results[0].name);
+                    console.log(utellyResp.results[0].locations[0].display_name);
+
 
                 //Loop through to get movie name
                 for (i = 0; i < utellyResp.results.length; i++) {
@@ -65,18 +60,29 @@ $(document).ready(function () {
                     var movieDiv = $("<div>"); //Jquery to make a Movie Div
                     movieDiv.addClass("movieDiv float-left"); //Adding Bootstrap Class to position images
                     var name = utellyResp.results[i].name; //Loop through UTELLY Json to get movie name 
-                    var p = $("<p>").text(name); //Setup a <p> tage for name
-                    var movieImage = $("<img>"); //creates an <img> tag on HTML 
+                    var p = $("<p class=movSelect>").text(name); //Setup a <p> tage for name
+                    var movieImage = $("<img class=movSelect>"); //creates an <img> tag on HTML 
                     movieImage.attr("src", utellyResp.results[i].picture); //Set img src attribute
                     link = $("<a>");
                     link.attr("href", "movie.html");
                     link.addClass("link");
+                  //p tag added value
+                    p.attr("value", name);
+                    p.addClass("p-movieName")
                     link.addClass("rounded"); //Adds Bootstrap class to round edges of image   
                     link.attr("target", "_blank")
                     movieDiv.prepend(p); //Adds <p> before the movie image to the div   
                     movieDiv.prepend(movieImage); //Adds the movieimage to the div   
                     link.append(movieDiv);
                     $("#movie-view").append(link); // Appends the DIv to the movie-view section of HTML   
+                    
+                    var tempObject = {
+                        searchResults: movie,
+                        moviename: name,
+                        dateAdded: Date.now()
+                    }
+                    database.ref().push(tempObject);
+                    console.log(tempObject)
 
                     //Original Code for looping and finding the search results
                     //$("#movie-view").append("<ul>"+utellyResp.results[i].name+"</ul>");
