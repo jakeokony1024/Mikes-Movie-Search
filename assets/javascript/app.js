@@ -15,6 +15,7 @@ var name;
 var picture;
 var display_name;
 var movie;
+var onClickItem;
 
 $(document).ready(function () {
 	console.log("ready!")
@@ -22,14 +23,10 @@ $(document).ready(function () {
 
 	database.ref().orderByChild("dateAdded").limitToLast(1).on("child_added", function(snapshot){
 		console.log(snapshot.val());
-		movie = snapshot.val();
+        movie = snapshot.val();
+        console.log(onClickItem);
 	 })
 
-
-
-
-
-	
 	const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' + movie + '&country=us'
     const options = {
         method: 'GET',
@@ -44,7 +41,39 @@ $(document).ready(function () {
         })
         .then((myJson) => {
 			utellyResp = (myJson);
-		});
+        });
+    
+        var APIKey ="AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8"
+        // -----------------------------------------------------------------------
+        function getVideo() {
+          $.ajax({
+            type: 'GET',
+            url: 'https://www.googleapis.com/youtube/v3/search',
+            data: {
+                key: 'AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8',
+                q: "wonder woman 1984 trailer",
+                part: 'snippet',
+                maxResults: 1,
+                type: 'video',
+                videoEmbeddable: true,
+            },
+            success: function(data){
+                embedVideo(data)
+                console.log(data);
+            },
+            error: function(response){
+                console.log("Request Failed");
+                console.log(response);
+            }
+          });
+        }
+        function embedVideo(data) {
+        $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
+        $('h3').text(data.items[0].snippet.title)
+        $('.description').text(data.items[0].snippet.description)
+    }
+    getVideo();
+    
 
 		// for (a = 0; a < utellyResp.results[0].locations.length; a++) {
 		// 	console.log(utellyResp.results[0].locations[a].display_name);

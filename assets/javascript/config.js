@@ -8,6 +8,7 @@
         var name;
         var picture;
         var display_name;
+        var onClickItem;
         // This .on("click") function will trigger the AJAX Call
         var config = {
             apiKey: "AIzaSyCGYhdtL7ScaEYcZwM31u3L-A5GWEdgkG4",
@@ -27,6 +28,7 @@
             console.log("This is the movie: " + movie);
             database.ref().push({
                 searchResults:movie,
+                onClickItem: display_name,
                 dateAdded: firebase.database.ServerValue.TIMESTAMP
             });
             // $("#movie-input").empty(); //clears out the div
