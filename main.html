@@ -5,26 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- link to css reset -->
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-    <!-- link to bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <!-- link to google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye|Anton&display=swap" rel="stylesheet">
-    <!-- link to css stylesheet -->
     <link rel="stylesheet" type="text/css" href="./assets/css/stylemain.css">
-    <!-- links to firebase -->
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+
     <title>MIKE'S MOVIE SEARCH</title>
 </head>
 
-<body>
+
+<body class="source-image">
+
+    <h1 class="neon"> Mike's Movie Search</h1>
     <div id="container">
-        <h1 class="neon"> Mike's Movie Search</h1>
-
-
+        <br>
         <!-- This form will be where users input data about the movies -->
         <form id="movie-form">
             <label for="movie-input" id="input">Search for a TV Show Or Movie</label>
@@ -32,24 +29,21 @@
             <!-- This button will trigger our AJAX call -->
             <input id="find-movie" type="submit" value="Search">
         </form>
-        <!-- We'll be dumping our JSON contents in here -->
+        <br>
+        <!-- We'll be dumping our movie contents in here -->
         <div class="container">
-            <div id="movie-view"></div>
+            <div id="movie-view">
+            </div>
         </div>
 
 
 
+
     </div>
-
-
-
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <script type="text/javascript" src="./assets/javascript/config.js"></script>
-
-
-
-
-
+    <footer id="stickyFooter"> &copy;BootCampSpot: Group C </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/javascript/config.js"></script>
 </body>
+
 
 </html>

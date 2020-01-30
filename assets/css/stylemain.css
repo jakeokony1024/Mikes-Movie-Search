@@ -9,6 +9,13 @@ body {
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
+#container {
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 
 h1 {
     /* font-family: 'Rye', cursive;*/
@@ -38,11 +45,11 @@ h1 {
 
 #input{
   color:rgb(241, 207, 14);
-font-size: 24px;
+  font-size: 24px;
 }
 
 #movie-view{
-  color: aliceblue;
+  color:goldenrod;
 }
 
 #find-movie {
@@ -67,17 +74,29 @@ p{
     text-overflow: ellipsis;
 }
 
+#stickyFooter {
+  background-color: black;
+  color: goldenrod;
+  padding-top: 10px;
+  margin-top: auto;
+}
+
 @media screen and (max-width: 640px){
   body {
-    background: url(../Images/media-background.jpg);
+    background: url(../Images/media-background.jpeg);
     background-size: 100%;
     background-repeat: initial;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    overflow: auto;
+    color: goldenrod;
   
   }
 
   .neon {
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   img {
@@ -96,5 +115,9 @@ p{
     clear: both;
     overflow: auto;
     text-align: center;
+  }
+
+  #stream-view {
+    margin-bottom: 10px;
   }
 }
