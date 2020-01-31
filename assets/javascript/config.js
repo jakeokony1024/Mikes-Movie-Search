@@ -9,7 +9,7 @@ $(document).ready(function () {
     var name;
     var picture;
     var provider;
-    var movLink = "";
+    var movLink = [];
 
     //Sets up onclick funtion to capture the show that was search for
 
@@ -55,7 +55,7 @@ $(document).ready(function () {
                     var movieImage = $("<img>"); //creates an <img> tag on HTML
                     movieImage.attr("src", utellyResp.results[i].picture); //Set img src attribute
                     link = $("<a id=movLink>");
-                    link.attr("href", "movie.html");
+                    link.attr( data, "href", "movie.html");
                     link.addClass("link");
                     link.addClass("rounded"); //Adds Bootstrap class to round edges of image   
                     link.attr("target", "_blank")
@@ -71,7 +71,7 @@ $(document).ready(function () {
                     movLink = localStorage.setItem('${this.data()}')
                     console.log(movLink)
                 
-                })
+                });
                 //Loop to get streaming service
                 for (a = 0; a < utellyResp.results[0].locations.length; a++) {
                     
