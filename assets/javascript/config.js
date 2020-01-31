@@ -1,6 +1,7 @@
 //Jquery Document.Ready function
 $(document).ready(function () {
     //Set up gobal variables
+
     var utellyResp;
     var display_name;
     var locations;
@@ -11,11 +12,15 @@ $(document).ready(function () {
     var movieName;
 
     //Sets up onclick funtion to capture the show that was search for
+
     $('#find-movie').on("click", function (event) {
         event.preventDefault();
         //Geting the value of text entered in  the input box 
         var movie = $("#movie-input").val().trim();
         console.log("This is the movie: " + movie);
+        // Get Input and send to local storage
+        var getInput = movie
+        localStorage.setItem("storageName",getInput);
 
         //Utelly API call to get the show that was searched for to see where it's streaming    
         const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' + movie + '&country=us'
@@ -83,3 +88,6 @@ $(document).ready(function () {
     //================================================================================================================================    
     //End tag for Document.Ready
 });
+
+
+ 
