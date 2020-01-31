@@ -13,6 +13,14 @@ body {
     height: 100vh;
   }
 
+  #container {
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+
 h1 {
     /* font-family: 'Rye', cursive;*/
     font-family: 'Limelight', cursive;
@@ -58,5 +66,34 @@ h1 {
 .image{
 position: absolute;
 top:630px;
+
+}
+
+#footer {
+  background-color: black;
+  color: goldenrod;
+  padding-top: 10px;
+  margin-top: auto;
+  
+}
+
+@media screen and (max-width: 640px){
+  
+
+  body {
+    background: url(../Images/media-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: auto;
+
+  }
+
+  h1 {
+    display: none;
+  }
+
+  .enter {
+    margin: 20px;
+  }
 
 }
