@@ -1,50 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/css/stylemain.css">
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
-    <title>MIKE'S MOVIE SEARCH</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="./assets/css/stylemain.css">
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+<title>MIKE'S MOVIE SEARCH</title>
 </head>
+
 <body>
-    <div id="container1">
-        <h1 class="neon">MIKES MOVIE SEARCH</h1>
-    <!---Streaming Services go here-->
-   <!-- We'll be dumping our movie contents in here -->
-        <div class="container">
-            <h4>Link to Streaming Service</h4>
-            <div id="stream-view"> 
+    <div id="container">
+        <div id="container1">
+            <h1 class="neon">MIKES MOVIE SEARCH</h1>
+            <!---Streaming Services go here-->
+            <!-- We'll be dumping our movie contents in here -->
+            <div class="container">
+                <h4>Link to Streaming Service</h4>
+                <div id="stream-view">
+                </div>
+            </div>
+            <!--Movie Titl going  here-->
+            <div class="container">
+                <div id="movie-view">
+                </div>
             </div>
         </div>
-    <!--Movie Titl going  here-->
-    <div class="container">
-        <div id="movie-view">
+        <br>
+        <br>
+        <!---You Tube Trailer goes here-->
+        <div class="container" id="youTube">
+            <!-- We'll be dumping our YouTube Trailer in here -->
+            <div id="youTube-view"></div>
+            <iframe src=""></iframe>
+            <h3>Video Title</h3>
+
         </div>
     </div>
-</div>
-  <br>
-  <br>
-    <!---You Tube Trailer goes here-->
-    <div class="container" id="youTube">
-        <!-- We'll be dumping our YouTube Trailer in here -->
-        <div id="youTube-view"></div>
-        <iframe src=""></iframe>
-        <h3>Video Title</h3>
-
-    </div>
     <footer id="stickyFooter"> &copy;BootCampSpot: Group C </footer>
-     <!--   <p class="description">Video Description<p>-->
-          <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-          crossorigin="anonymous"></script>
-        <script type="text/javascript"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-     <script src="./assets/javascript/app.js"></script>
+    <!--   <p class="description">Video Description<p>-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./assets/javascript/app.js"></script>
 </body>
+
 </html>

@@ -22,7 +22,6 @@ $(document).ready(function () {
         .then((myJson) => {
             utellyResp = (myJson);
                        
-            
             (utellyResp.results[0].locations[0].url);
             
             var movieName = utellyResp.results[0].name;
@@ -88,22 +87,22 @@ $(document).ready(function () {
 
         });
 
-    function getImdb(){
-        var settings = {
-            async: true,
-            crossDomain: true,
-            queryURL: "https://movie-database-imdb-alternative.p.rapidapi.com/?page=1&r=json&s=",
-            method: "GET",
-            headers: {
-                "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com",
-                "x-rapidapi-key": "a319d638b0msh397c0e24b21a62fp1a2660jsnc7f7e0f81537"
-            }
-        }
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-          }).then(function(response) {
-              console.log(response)
-          });    
-    };
+    // function getImdb(){
+    //     var settings = {
+    //         async: true,
+    //         crossDomain: true,
+    //         queryURL: "https://movie-database-imdb-alternative.p.rapidapi.com/?page=1&r=json&s=",
+    //         method: "GET",
+    //         headers: {
+    //             "x-rapidapi-host": "movie-database-imdb-alternative.p.rapidapi.com",
+    //             "x-rapidapi-key": "a319d638b0msh397c0e24b21a62fp1a2660jsnc7f7e0f81537"
+    //         }
+    //     }
+    //     $.ajax({
+    //         url: queryURL,
+    //         method: "GET"
+    //       }).then(function(response) {
+    //           console.log(response)
+    //       });    
+    // };
 });
