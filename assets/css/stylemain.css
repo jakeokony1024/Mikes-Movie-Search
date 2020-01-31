@@ -92,7 +92,7 @@ p{
 
 @media screen and (max-width: 640px){
   body {
-    background: url(../Images/media-background.jpeg);
+    background: url(../Images/media-background.jpg);
     background-size: 100%;
     background-repeat: initial;
     text-align: center;

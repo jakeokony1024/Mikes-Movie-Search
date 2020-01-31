@@ -46,7 +46,6 @@ $(document).ready(function () {
                 //    console.log(utellyResp.results[0].locations[0].url);
                 //Loop through to get movie name
                 for (i = 0; i < utellyResp.results.length; i++) {
-                    
                     var movieDiv = $("<div>"); //Jquery to make a Movie Div
                     movieDiv.addClass("movieDiv float-left"); //Adding Bootstrap Class to position images
                     var name = utellyResp.results[i].name; //Loop through UTELLY Json to get movie name 
@@ -55,22 +54,19 @@ $(document).ready(function () {
                     var movieImage = $("<img>"); //creates an <img> tag on HTML
                     movieImage.attr("src", utellyResp.results[i].picture); //Set img src attribute
                     link = $("<a id=movLink>");
-                    link.attr( data, "href", "movie.html");
+                    link.data("href", "movie.html");
+                    link.data("movieName", name);
                     link.addClass("link");
+                    link.addClass("movieAtag")
                     link.addClass("rounded"); //Adds Bootstrap class to round edges of image   
                     link.attr("target", "_blank")
                     movieDiv.prepend(p); //Adds <p> before the movie image to the div   
                     movieDiv.prepend(movieImage); //Adds the movieimage to the div   
                     link.append(movieDiv);
                     $("#movie-view").append(link); // Appends the DIv to the movie-view section of HTML   
-                    
                 }
-
-                $(document).on("click", "#movLink", function(){
-    
-                    movLink = localStorage.setItem('${this.data()}')
-                    console.log(movLink)
-                
+                $(document).on("click", ".movieAtag", function(){
+                    movieName = localStorage.setItem($(this.data("movieName")))
                 });
                 //Loop to get streaming service
                 for (a = 0; a < utellyResp.results[0].locations.length; a++) {
