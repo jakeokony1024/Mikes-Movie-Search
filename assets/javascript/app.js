@@ -1,5 +1,6 @@
 $(document).ready(function () {
     console.log("ready!")
+    getImdb();
     
     //Set up gobal variables
     var utellyResp;
@@ -21,25 +22,26 @@ $(document).ready(function () {
         })
         .then((myJson) => {
             utellyResp = (myJson);
-                       
-            
+            //Testing -Console logs to deteremine where the data fields we want are            
+            console.log(utellyResp);
+            console.log(utellyResp.results);
+            console.log(utellyResp.results[0].name);
+            console.log(utellyResp.results[0].locations[0].display_name);
             (utellyResp.results[0].locations[0].url);
-            
+            console.log("This is the Movie Name - " + utellyResp.results[0].name);
             var movieName = utellyResp.results[0].name;
-            
+            console.log(utellyResp.results[0].locations[0].display_name);
+            console.log("This is the Streamer URL- " + utellyResp.results[0].locations[0].url);
             var streamer = utellyResp.results[0].locations[0].url
-
+            
             $("#stream-view").append(streamer)
 
             for (i = 0; i < utellyResp.results.length; i++) {
                 for (i = 0; i < utellyResp.results.length; i++) {
                     
                     var movieDiv = $("<div>"); //Jquery to make a Movie Div
-
                     movieDiv.addClass("movieDiv"); //Adding Bootstrap Class to position images
-
                     var name = utellyResp.results[0].name; //Loop through UTELLY Json to get movie name 
-
                     var p = $("<p>").text(movieName); //Setup a <p> tage for name
 
                     movieDiv.prepend(p); //Adds <p> before the movie image to the div   
@@ -77,7 +79,7 @@ $(document).ready(function () {
 
 
                 function embedVideo(data) {
-                    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
+                    $('iframe').attr(' src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
                     $('h3').text(data.items[0].snippet.title)
                     $('.description').text(data.items[0].snippet.description)
                 }

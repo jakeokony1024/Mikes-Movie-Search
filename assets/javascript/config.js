@@ -9,6 +9,7 @@ $(document).ready(function () {
     var name;
     var picture;
     var provider;
+    var movLink = "";
 
     //Sets up onclick funtion to capture the show that was search for
 
@@ -49,11 +50,11 @@ $(document).ready(function () {
                     var movieDiv = $("<div>"); //Jquery to make a Movie Div
                     movieDiv.addClass("movieDiv float-left"); //Adding Bootstrap Class to position images
                     var name = utellyResp.results[i].name; //Loop through UTELLY Json to get movie name 
-                    var p = $("<p id=movLink>").text(name); //Setup a <p> tage for name
+                    var p = $("<p>").text(name); //Setup a <p> tage for name
                     p.attr("data-name", name);//gives each <p> tag matching data name with name
                     var movieImage = $("<img>"); //creates an <img> tag on HTML
                     movieImage.attr("src", utellyResp.results[i].picture); //Set img src attribute
-                    link = $("<a id=movLinks>");
+                    link = $("<a id=movLink>");
                     link.attr("href", "movie.html");
                     link.addClass("link");
                     link.addClass("rounded"); //Adds Bootstrap class to round edges of image   
@@ -64,6 +65,13 @@ $(document).ready(function () {
                     $("#movie-view").append(link); // Appends the DIv to the movie-view section of HTML   
                     
                 }
+
+                $(document).on("click", "#movLink", function(){
+    
+                    movLink = localStorage.setItem('${this.data()}')
+                    console.log(movLink)
+                
+                })
                 //Loop to get streaming service
                 for (a = 0; a < utellyResp.results[0].locations.length; a++) {
                     
@@ -76,9 +84,9 @@ $(document).ready(function () {
     //End tag for Document.Ready
 });
 
-$(document).on("click", "#movLink", function(){
+$(document).on("click", "#movLink2", function(){
     
-    var movLink = $("#movLink").val().trim();
+    var movLink = localStorage.setItem('${this.data()}')
     console.log(movLink)
 
 })
