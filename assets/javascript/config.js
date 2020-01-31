@@ -78,27 +78,16 @@ $(document).ready(function () {
                     $("#movie-view").append(movieHtml);
                 })
 
-                // $(document).on("click", "#", function () {
+                $(document).on("click", ".movieAtag", function () {
+                    movieName = localStorage.setItem($("storageName",$(this).data("moviename")))
+                    console.log(movieName)
+                });
 
-                //     movLink = localStorage.setItem('${this.data()}')
-                //     console.log(movLink)
-
-                // });
-                //Loop to get streaming service
-                for (a = 0; a < utellyResp.results[0].locations.length; a++) {
-
-                    provider = (utellyResp.results[0].locations[a].display_name);
-                    console.log(provider);
-                }
+            localStorage.setItem("storageName", moviename)
+                
             });
     });
     //================================================================================================================================    
     //End tag for Document.Ready
 });
 
-$(document).on("click", "#movLink2", function () {
-
-    var movLink = localStorage.setItem('${this.data()}')
-    console.log(movLink)
-
-})
