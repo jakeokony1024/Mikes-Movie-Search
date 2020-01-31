@@ -1,5 +1,6 @@
 //Jquery Document.Ready function
 $(document).ready(function () {
+
     
     //Set up gobal variables
 
@@ -80,9 +81,5 @@ $(document).ready(function () {
     //End tag for Document.Ready
 });
 
-$(document).on("click", "#movLink2", function(){
-    
-    var movLink = localStorage.setItem('${this.data()}')
-    console.log(movLink)
 
-})
+ 
