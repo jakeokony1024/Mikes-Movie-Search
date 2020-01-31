@@ -40,7 +40,7 @@ $(document).ready(function () {
 
                     var name = utellyResp.results[0].name; //Loop through UTELLY Json to get movie name 
 
-                    var p = $("<p>").text(movieName); //Setup a <p> tage for name
+                    var p = $("<p>").text(movieName[i]); //Setup a <p> tage for name
 
                     movieDiv.prepend(p); //Adds <p> before the movie image to the div   
 
