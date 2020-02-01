@@ -1,9 +1,6 @@
 //Jquery Document.Ready function
 $(document).ready(function () {
-<<<<<<< HEAD
-=======
     console.log("ready!");
->>>>>>> 28faf46535355f9c9d1fedb6444c750241b7262d
     //Set up gobal variables
 
     var utellyResp;
@@ -11,17 +8,10 @@ $(document).ready(function () {
     var locations;
     var name;
     var picture;
-<<<<<<< HEAD
-    var provider;
-    var movLink = [];
-    var movieName;
-
-=======
     var movieName;
     var movieAtag;
     var movieDiv;
     var p;
->>>>>>> 28faf46535355f9c9d1fedb6444c750241b7262d
     //Sets up onclick funtion to capture the show that was search for
 
     $('#find-movie').on("click", function (event) {
