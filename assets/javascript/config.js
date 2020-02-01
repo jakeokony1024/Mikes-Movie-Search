@@ -102,7 +102,7 @@ $(document).ready(function () {
                                         
                                  </div>
                          </a>`;
-                 $("#movie-view").append(movieHtml);
+                 $("#movie-view").prepend(movieHtml);
              })
              $(document).on("click", ".movieAtag", function () {
                 movieName = localStorage.setItem("storageName",$(this).data("moviename"))
