@@ -9,23 +9,18 @@ body {
   font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
 h4 {
   font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   color:goldenrod;
 }
-
 #container {
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   width:  980px;
   margin:0 auto;
 }
-
-
 h1 {
     /* font-family: 'Rye', cursive;*/
     font-family: 'Limelight', cursive;
@@ -36,7 +31,6 @@ h1 {
     letter-spacing: 4px;
     color:rgb(241, 207, 14);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    
     }
     .neon{
     color: #fff;
@@ -59,19 +53,15 @@ h1 {
   color:rgb(241, 207, 14);
   font-size: 24px;
 }
-
 #movie-view{
   color:goldenrod;
 }
-
 #find-movie {
   background-color: black;
   border-color: black;
   color: goldenrod;
 }
-
 img{
- 
   max-height: 100px ;
   display: inline;
   display: block;
@@ -124,6 +114,18 @@ img{
   text-align: center; 
 width: 960px;
 margin: 0 auto;
+}
+.localName{
+  color: rgb(241, 207, 14);
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+#stream-view{
+  color: rgb(241, 207, 14);
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .img{
