@@ -8,35 +8,44 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="./assets/css/stylemain.css">
+
+
 <title>MIKE'S MOVIE SEARCH</title>
 </head>
+
 <body>
     <div id="container1">
         <h1 class="neon">MOVIE HTML</h1>
-        <!--Movie Title going  here-->
-        <div class="container">
-            <div id="title-view">
-            </div>
-        </div>
-        <!---Streaming Services go here-->
-        <div class="container">
-            <div id="stream-view">
-            </div>
-        </div>
-        <!--Movie Title going  here-->
-        <div class="container">
-            <div id="movie-view">
-            </div>
+        <p1 class="search"> The movie you searched for:<span class="result"></span></p1>
+    </div>
+    <!--IMDB Infomration Movie going  here-->
+    <div class="containeri">
+        <div id="movies-view">
         </div>
     </div>
+   
+    <hr class="line">
     <br>
+    <br>
+    <!--Movie Information going  here-->
+    <div class="container">
+        <div id="m-view">
+        </div>
+    </div>
+
+    <!---Streaming Services go here-->
+    <div class="container">
+        <div id="stream-view">
+            <p1 class="search">The Movie Is Streaming Here:</p1>
+        </div>
+    </div>
     <br>
     <!---------------------------------------------You Tube Trailer goes here--------------------------------------------------------------------------->
     <div class="container" id="youTube">
         <!-- We'll be dumping our YouTube Trailer in here -->
         <div id="youTube-view"></div>
         <iframe src=""></iframe>
-        <h3>Video Title</h3>
+        <h3 class="search">Video Title</h3>
         <!--   <p class="description">Video Description<p>-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -44,4 +53,5 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
          <script src="./assets/javascript/app.js"></script>
 </body>
+
 </html>
