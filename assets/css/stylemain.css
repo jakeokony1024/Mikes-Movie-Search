@@ -5,6 +5,88 @@ body {
   -o-background-size: cover;
   background-size: cover;
   text-align: center;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+}
+#container {
+  display: flex;
+  flex-direction: column;
+ /* min-height: 100vh;*/
+}
+h1 {
+  /* font-family: 'Rye', cursive;*/
+  font-family: 'Limelight', cursive;
+  /*font-family: 'Bungee Shade', cursive;*/
+  position: relative;
+  text-transform: uppercase;
+  font-size: 120px;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(90deg, #000, #fff, #000);
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: animate 4s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: rgba(255, 01, 01, 0.1);
+}
+@keyframes animate {
+  0% {
+      background-position: -500%;
+  }
+  100% {
+      background-position: 500%;
+  }
+}
+.enter {
+  font-family: 'Limelight', cursive;
+  font-size: 50px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: red;
+  margin: auto 0;
+position: relative;
+}
+.image{
+position: absolute;
+top:630px;
+}
+#footer {
+background-color: black;
+color: goldenrod;
+padding-top: 10px;
+margin-top: auto;
+}
+@media screen and (max-width: 640px){
+body {
+  background: url(../Images/media-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: auto;
+}
+h1 {
+  display: none;
+}
+.enter {
+  margin: 20px;
+}
+}
+10:15
+stylemain.css
+10:15
+body { 
+  background: url(../Images/Capture.JPG) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  text-align: center;
   font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -63,7 +145,6 @@ img{
   margin-right: 10px;
 }
 /*Img name displayed in the movie #movie view div*/
-
 .container{
   width: 980px;
 }
@@ -73,16 +154,17 @@ img{
   text-align: center;
   margin: 0 auto;
 }
-
 #stream-view{
   color: rgb(241, 207, 14);
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
 }
-
-.ellips{
-  width:980px ;
+.movPTitle{
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .title {
   color: rgb(241, 207, 14);
@@ -92,16 +174,14 @@ img{
   width: auto;
 }
 .search{
-  
+  text-shadow: -2px black, 0 1.5px black, 2px 0 black , 0 -1.5px black;
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
   width: auto;
  /* text-decoration: underline;*/
- color: rgb(241, 207, 14);
+ color: rgb(241, 207, 25);
 }
-
-
 .movie{
   color: rgb(229, 228, 240);
   font-size: 22px;
@@ -121,7 +201,6 @@ margin: 0 auto;
   text-align: center;
   margin: 0 auto;
 }
-
 .img{
   margin: auto;
 }
@@ -131,9 +210,6 @@ width: 246px;
 height: 50px;
 color: rgb(229, 228, 240);
   font-size: 24px;
-
-  
-
 }
 .release{
 float: right;
@@ -145,13 +221,84 @@ color: rgb(229, 228, 240);
   max-height: 150px;
   margin: 0 auto;
 }
-
 #m-view{
   width: 800px;
   margin: 0 auto;
 }
-
 .line{
   border-top: 3px solid rgb(241, 207, 14);
-;width: 960px;
+width: 930px; 
+}
+.p3{
+  display: flex;
+}
+#footer {
+  background-color: black;
+  color: goldenrod;
+  padding-top: 10px;
+  margin-top: auto;
+}
+@media screen and (max-width: 640px){
+  /* CSS for main.html and movie.html */
+  body {
+    background: url(../Images/media-background.jpg);
+    background-size: 100%;
+    background-repeat: initial;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    overflow: auto;
+    color: goldenrod;
+  }
+  #container {
+    max-width: 100%;
+  }
+  #container1, #containeri {
+    max-width: 100%;
+  }
+  .plot {
+    max-width: 66%;
+    text-align: center;
+    text-emphasis: wrap;
+    overflow: auto;
+  }
+  .neon {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .line {
+    max-width: 55%;
+  }
+  .m-view {
+    max-width: 66%;
+    clear: both;
+  }
+  .img {
+    float: left;
+  }
+  .str,
+  .search,
+  .release,
+  .rating {
+    font-size: 20px;
+  }
+  img {
+    display: list-item;
+  }
+  #movie-view {
+    margin: auto;
+    width: 50%;
+  }
+  #movie-form{
+    text-align: center;
+  }
+  .movieDiv {
+    clear: both;
+    overflow: auto;
+    text-align: center;
+  }
+  #stream-view {
+    margin-bottom: 10px;
+  }
+  /* End of CSS for main.html */
 }
