@@ -214,14 +214,17 @@ width: 930px;
     max-width: 55%;
   }
   .m-view {
-    max-width: 50%;
+    max-width: 66%;
     clear: both;
   }
-  .rating {
-    
+  .img {
+    float: left;
   }
+  
   .str,
-  .search {
+  .search,
+  .release,
+  .rating {
     font-size: 20px;
   }
   
