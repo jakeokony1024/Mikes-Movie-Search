@@ -87,8 +87,12 @@ img{
   margin: 0 auto;
 }
 
-.ellips{
-  width:980px ;
+.movPTitle{
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
 }
 .title {
   color: rgb(241, 207, 14);
@@ -98,13 +102,14 @@ img{
   width: auto;
 }
 .search{
-  
+  text-shadow: -2px black, 0 1.5px black, 2px 0 black , 0 -1.5px black;
+
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
   width: auto;
  /* text-decoration: underline;*/
- color: rgb(241, 207, 14);
+ color: rgb(241, 207, 25);
 }
 
 
@@ -159,5 +164,8 @@ color: rgb(229, 228, 240);
 
 .line{
   border-top: 3px solid rgb(241, 207, 14);
-;width: 960px;
+width: 930px; 
+}
+.p3{
+  display: flex;
 }

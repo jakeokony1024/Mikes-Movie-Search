@@ -98,7 +98,7 @@ $(document).ready(function () {
                          `<a href='movie.html' data-moviename='${movie.name}' class='link movieAtag rounded' target='_blank'>
                                  <div class='movieDiv float-left'>
                                          <img src='${movie.picture}' />
-                                         <p data-name='${movie.name}'>${movie.name}</p>
+                                         <p data-name='${movie.name}' class = 'movPTitle'>${movie.name}</p>
                                         
                                  </div>
                          </a>`;
