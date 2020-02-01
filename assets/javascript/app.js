@@ -91,6 +91,7 @@ $(document).ready(function () {
         // Creating an element to hold the plot
         var pThree = $("<p>").text("Plot: " + plot);
         // Appending the plot
+        pThree.addClass("plot");
         movieDiv.append(pThree);
         //Creating a Div for the Rating, Image and Release
         var mviewDiv = $("<div class='m-view'>");
