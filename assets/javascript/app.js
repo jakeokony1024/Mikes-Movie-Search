@@ -33,7 +33,7 @@ $(document).ready(function () {
         .then((myJson) => {
             utellyResp = (myJson);
             //Testing -Console logs to deteremine where the data fields we want are            
-
+            console.log(myJson)
             //Loop through to get movie name
             for (a = 0; a < utellyResp.results[0].locations.length; a++) {
                 console.log(utellyResp.results[0].locations[a].display_name);
@@ -42,15 +42,36 @@ $(document).ready(function () {
                 var streamDiv = $("<div>"); //Jquery to make a Movie Div
                 streamDiv.addClass("streamDiv"); //Adding Bootstrap Class to position images
                 var stream = utellyResp.results[0].locations[a].display_name; //Loop through UTELLY Json to get movie name                   
-
+                console.log(utellyResp.results)
+                // utellyResp.results[0].forEach(url => {
+                //     console.log(url)
                 var p = $("<p>").text(stream); //Setup a <p> tage for name
                 p.addClass("str")
+                // });
                 
+                // var pLink = $("<a>")
+                // pLink.attr("href", streamUrl);
+                // $(p).append(pLink);
+
                 $("#stream-view").append(p); // Appends the DIv to the movie-view section of HTML 
 
+                // failed attemp t#1
+                var streamLink = $("<br> <a href=" +streamUrl+ ">" + "click here" + "</a>");
+                $(".str").append(streamLink);
+
+                //failed attempt #2
+                // var streamLink = streamUrl
+                //     streamLink.map(streamUrl => {
+                //     var streamHtml = 
+                //         `<a href ='streamUrl'>
+                //             <div class= 'streamDiv'>
+                //                 <p class='str'> ${streamUrl} </p>
+                //             </div>
+                //         </a>`;
+                //     $("#stream-view").append(streamHtml);
+                // });
 
             }
-
 
         });
     //   http://www.omdbapi.com/?i=tt3896198&apikey=bbe0873c
