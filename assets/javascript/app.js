@@ -5,8 +5,10 @@ $(document).ready(function () {
     var name;
     var streamUrl;
     //Getting the name from local storage
+
     // console.log(localStorage.getItem("movieName"));
     let moviename = (localStorage.getItem("storageName"))
+
     //Create structure for displaying movie name======================================================
     var titleDiv = $("<div>"); //Jquery to make a Movie Div
     titleDiv.addClass("titleDiv"); //Adding Bootstrap Class to position images
@@ -31,27 +33,52 @@ $(document).ready(function () {
         .then((myJson) => {
             utellyResp = (myJson);
             //Testing -Console logs to deteremine where the data fields we want are            
+            console.log(myJson)
             //Loop through to get movie name
-            var linkUrl = utellyResp.results[0].locations[1].url; //variable to hold the link to streaming service
-
             for (a = 0; a < utellyResp.results[0].locations.length; a++) {
-                
+                console.log(utellyResp.results[0].locations[a].display_name);
                 streamUrl = utellyResp.results[0].locations[a].url
-                
+                console.log(streamUrl);
                 var streamDiv = $("<div>"); //Jquery to make a Movie Div
                 streamDiv.addClass("streamDiv"); //Adding Bootstrap Class to position images
-                var stream = utellyResp.results[0].locations[a].display_name;
-                console.log(stream) //Loop through UTELLY Json to get movie name                   
-                var p = $("<a href=" + linkUrl + ">").html(linkUrl); //Setup a <p> tage for name
+                var stream = utellyResp.results[0].locations[a].display_name; //Loop through UTELLY Json to get movie name                   
+                console.log(utellyResp.results)
+                // utellyResp.results[0].forEach(url => {
+                //     console.log(url)
+                var p = $("<p>").text(stream); //Setup a <p> tage for name
                 p.addClass("str")
-                p.data("href", linkUrl)
-                $("#stream-view").html(p); // Shows just the first link available of the DIv to the movie-view section of HTML 
+                // });
+                
+                // var pLink = $("<a>")
+                // pLink.attr("href", streamUrl);
+                // $(p).append(pLink);
 
-            } 
+                $("#stream-view").append(p); // Appends the DIv to the movie-view section of HTML 
+
+                // failed attemp t#1
+                var streamLink = $("<br> <a href=" +streamUrl+ ">" + "click here" + "</a>");
+                $(".str").append(streamLink);
+
+                //failed attempt #2
+                // var streamLink = streamUrl
+                //     streamLink.map(streamUrl => {
+                //     var streamHtml = 
+                //         `<a href ='streamUrl'>
+                //             <div class= 'streamDiv'>
+                //                 <p class='str'> ${streamUrl} </p>
+                //             </div>
+                //         </a>`;
+                //     $("#stream-view").append(streamHtml);
+                // });
+
+            }
+
+
         });
     //   http://www.omdbapi.com/?i=tt3896198&apikey=bbe0873c
     //===========================================================================================================
     var queryURL = "https://www.omdbapi.com/?t=" + moviename + "&apikey=bbe0873c";
+
     // Creating an AJAX call for IMDB
     $.ajax({
         url: queryURL,
@@ -64,7 +91,7 @@ $(document).ready(function () {
         var plot = response.Plot;
         // Creating an element to hold the plot
         var pThree = $("<p>").text("Plot: " + plot);
-        pThree.addClass("plot")
+        pThree.addClass("plot");
         // Appending the plot
         movieDiv.append(pThree);
         //Creating a Div for the Rating, Image and Release
@@ -92,8 +119,10 @@ $(document).ready(function () {
         mviewDiv.append(image);
         // Putting the information in the DIVS
         $("#movies-view").prepend(movieDiv);
+
         $("#m-view").prepend(mviewDiv);
     });
+
     //YOU TUBE API TRAILERS IS WORKING!!
     //=========================================================================================================================================
     var APIKey ="AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8"
@@ -103,7 +132,7 @@ $(document).ready(function () {
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
-            key: APIKey,
+            key: 'AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8',
             q: moviename + "trailer",
             part: 'snippet',
             maxResults: 1,
@@ -120,10 +149,16 @@ $(document).ready(function () {
         }
       });
     }
+    
+
     function embedVideo(data) {
     $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId)
     $('h3').text(data.items[0].snippet.title)
     $('.description').text(data.items[0].snippet.description)
 }
+
+
 getVideo();
+
+
 });

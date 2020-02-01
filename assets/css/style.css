@@ -61,6 +61,8 @@ h1 {
   color: red;
   margin: auto 0;
 position: relative;
+background: transparent;
+border-color: transparent;
 }
 
 .image{
@@ -81,7 +83,7 @@ margin-top: auto;
 
 
 body {
-  background: url(../Images/media-background.jpeg);
+  background: url(../Images/media-background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   overflow: auto;

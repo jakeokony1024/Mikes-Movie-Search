@@ -179,7 +179,7 @@ width: 930px;
 }
 @media screen and (max-width: 640px){
 
-  /* CSS for main.html */
+  /* CSS for main.html and movie.html */
   body {
     background: url(../Images/media-background.jpg);
     background-size: 100%;
