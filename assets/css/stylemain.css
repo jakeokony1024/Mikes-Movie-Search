@@ -9,21 +9,18 @@ body {
   font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-
 h4 {
   font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   color:goldenrod;
 }
-
 #container {
-
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width:  980px;
+  margin:0 auto;
 }
-
-
 h1 {
     /* font-family: 'Rye', cursive;*/
     font-family: 'Limelight', cursive;
@@ -34,7 +31,6 @@ h1 {
     letter-spacing: 4px;
     color:rgb(241, 207, 14);
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    
     }
     .neon{
     color: #fff;
@@ -46,48 +42,132 @@ h1 {
       0 0 80px #fffb00,
       0 0 90px #fffb00,
       0 0 100px #fffb00,
-      0 0 125px #fffb00;
+      0 0 120px #fffb00;
     }
+
+        
+
 
 
 #input{
   color:rgb(241, 207, 14);
   font-size: 24px;
 }
-
 #movie-view{
   color:goldenrod;
 }
-
 #find-movie {
   background-color: black;
   border-color: black;
   color: goldenrod;
 }
-
 img{
- 
   max-height: 100px ;
   display: inline;
   display: block;
-  margin-left: 20px;
+  margin-left: 0px;
   margin-right: 10px;
 }
+/*Img name displayed in the movie #movie view div*/
 
-
-
-p{
-  width: 180px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.container{
+  width: 980px;
+}
+.localName{
+  color: rgb(241, 207, 14);
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
 }
 
-#footer {
-  background-color: black;
-  color: goldenrod;
-  padding-top: 10px;
-  margin-top: auto;
+#stream-view{
+  color: rgb(241, 207, 14);
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.movPTitle{
+  width: 180px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+.title {
+  color: rgb(241, 207, 14);
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+}
+.search{
+  text-shadow: -2px black, 0 1.5px black, 2px 0 black , 0 -1.5px black;
+
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+ /* text-decoration: underline;*/
+ color: rgb(241, 207, 25);
+}
+
+
+.movie{
+  color: rgb(229, 228, 240);
+  font-size: 22px;
+  text-align: center; 
+width: 960px;
+margin: 0 auto;
+}
+.localName{
+  color: rgb(241, 207, 14);
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+#stream-view{
+  color: rgb(241, 207, 14);
+  font-size: 36px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.img{
+  margin: auto;
+}
+.rating{
+float: left;
+width: 246px;
+height: 50px;
+color: rgb(229, 228, 240);
+  font-size: 24px;
+
+  
+
+}
+.release{
+float: right;
+color: rgb(229, 228, 240);
+  font-size: 24px;
+  text-align: center; 
+}
+.img{
+  max-height: 150px;
+  margin: 0 auto;
+}
+
+#m-view{
+  width: 800px;
+  margin: 0 auto;
+}
+
+.line{
+  border-top: 3px solid rgb(241, 207, 14);
+width: 930px; 
+}
+.p3{
+  display: flex;
 }
 
 @media screen and (max-width: 640px){
@@ -100,33 +180,25 @@ p{
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     overflow: auto;
     color: goldenrod;
-  
   }
-
   .neon {
     font-size: 40px;
     margin-bottom: 5px;
   }
-
   img {
     display: list-item;
-    
-    
   }
-
   #movie-view {
     margin: auto;
     width: 50%;
   }
-
   .movieDiv {
-    
     clear: both;
     overflow: auto;
     text-align: center;
   }
-
   #stream-view {
     margin-bottom: 10px;
   }
 }
+
