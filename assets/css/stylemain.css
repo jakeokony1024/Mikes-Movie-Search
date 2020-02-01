@@ -21,6 +21,8 @@ h4 {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  width:  980px;
+  margin:0 auto;
 }
 
 
@@ -46,8 +48,11 @@ h1 {
       0 0 80px #fffb00,
       0 0 90px #fffb00,
       0 0 100px #fffb00,
-      0 0 125px #fffb00;
+      0 0 120px #fffb00;
     }
+
+        
+
 
 
 #input{
@@ -70,20 +75,13 @@ img{
   max-height: 100px ;
   display: inline;
   display: block;
-  margin-left: 20px;
+  margin-left: 0px;
   margin-right: 10px;
 }
-<<<<<<< HEAD
 /*Img name displayed in the movie #movie view div*/
-.title {
-  width: 180px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: #fffb00;
-}
+
 .container{
-  width: 960px;
+  width: 980px;
 }
 .localName{
   color: rgb(241, 207, 14);
@@ -94,72 +92,70 @@ img{
 
 #stream-view{
   color: rgb(241, 207, 14);
-  font-size: 36px;
+  font-size: 28px;
   text-align: center;
   margin: 0 auto;
 }
 
-data-name{
-  width: 180px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.ellips{
+  width:980px ;
 }
-=======
-
-
-
-p{
-  width: 180px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.title {
+  color: rgb(241, 207, 14);
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
 }
-
-#footer {
-  background-color: black;
-  color: goldenrod;
-  padding-top: 10px;
-  margin-top: auto;
-}
-
-@media screen and (max-width: 640px){
-  body {
-    background: url(../Images/media-background.jpeg);
-    background-size: 100%;
-    background-repeat: initial;
-    text-align: center;
-    font-family: 'Anton', sans-serif;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    overflow: auto;
-    color: goldenrod;
+.search{
   
-  }
+  font-size: 28px;
+  text-align: center;
+  margin: 0 auto;
+  width: auto;
+ /* text-decoration: underline;*/
+ color: rgb(241, 207, 14);
+}
 
-  .neon {
-    font-size: 40px;
-    margin-bottom: 5px;
-  }
 
-  img {
-    display: list-item;
-    
-    
-  }
+.movie{
+  color: rgb(229, 228, 240);
+  font-size: 22px;
+  text-align: center; 
+width: 960px;
+margin: 0 auto;
+}
 
-  #movie-view {
-    margin: auto;
-    width: 50%;
-  }
+.img{
+  margin: auto;
+}
+.rating{
+float: left;
+width: 246px;
+height: 50px;
+color: rgb(229, 228, 240);
+  font-size: 24px;
 
-  .movieDiv {
-    
-    clear: both;
-    overflow: auto;
-    text-align: center;
-  }
+  
 
-  #stream-view {
-    margin-bottom: 10px;
-  }
->>>>>>> 9885e4fb350630b8a79defc1c8e87c6ae218e8a8
+}
+.release{
+float: right;
+color: rgb(229, 228, 240);
+  font-size: 24px;
+  text-align: center; 
+}
+.img{
+  max-height: 150px;
+  margin: 0 auto;
+}
+
+#m-view{
+  width: 800px;
+  margin: 0 auto;
+}
+
+.line{
+  border-top: 3px solid rgb(241, 207, 14);
+;width: 960px;
+}
