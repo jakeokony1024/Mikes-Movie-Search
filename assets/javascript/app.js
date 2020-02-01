@@ -64,6 +64,7 @@ $(document).ready(function () {
         var plot = response.Plot;
         // Creating an element to hold the plot
         var pThree = $("<p>").text("Plot: " + plot);
+        pThree.addClass("plot")
         // Appending the plot
         movieDiv.append(pThree);
         //Creating a Div for the Rating, Image and Release
@@ -102,7 +103,7 @@ $(document).ready(function () {
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
-            key: 'AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8',
+            key: APIKey,
             q: moviename + "trailer",
             part: 'snippet',
             maxResults: 1,
