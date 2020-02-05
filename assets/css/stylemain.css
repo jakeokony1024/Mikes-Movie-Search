@@ -181,6 +181,7 @@ width: 930px;
 
   /* CSS for main.html and movie.html */
   body {
+    max-width: 100%;
     background: url(../Images/media-background.jpg);
     background-size: 100%;
     background-repeat: initial;
