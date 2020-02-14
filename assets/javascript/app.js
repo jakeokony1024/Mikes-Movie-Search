@@ -6,7 +6,9 @@ $(document).ready(function () {
     var streamUrl;
     //Getting the name from local storage
 
-    let moviename = (localStorage.getItem("storageName"))
+ console.log(localStorage.getItem("movieName"));
+
+ let moviename = (localStorage.getItem("storageName"))
 
     //Create structure for displaying movie name======================================================
     var titleDiv = $("<div>"); //Jquery to make a Movie Div
@@ -41,13 +43,12 @@ $(document).ready(function () {
                 var streamDiv = $("<div>"); //Jquery to make a Movie Div
                 streamDiv.addClass("streamDiv"); //Adding Bootstrap Class to position images
                 var stream = utellyResp.results[0].locations[a].display_name; //Loop through UTELLY Json to get movie name                   
+
                 p.addClass("stream")
                 $("#stream-view").append(p);
                 var streamLink = $("<br> <a href=" + streamUrl + ">" + stream + "</a>")
                 $(".stream").append(streamLink);
             }
-
-
         });
     //   http://www.omdbapi.com/?i=tt3896198&apikey=bbe0873c
     //===========================================================================================================
@@ -65,8 +66,8 @@ $(document).ready(function () {
         var plot = response.Plot;
         // Creating an element to hold the plot
         var pThree = $("<p>").text("Plot: " + plot);
-        pThree.addClass("plot");
         // Appending the plot
+        pThree.addClass("plot");
         movieDiv.append(pThree);
         //Creating a Div for the Rating, Image and Release
         var mviewDiv = $("<div class='m-view'>");
@@ -99,9 +100,10 @@ $(document).ready(function () {
 
     //YOU TUBE API TRAILERS IS WORKING!!
     //=========================================================================================================================================
-    var APIKey = "AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8"
+    var APIKey ="AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8"
     // -----------------------------------------------------------------------
     function getVideo() {
+
         $.ajax({
             type: 'GET',
             url: 'https://www.googleapis.com/youtube/v3/search',
@@ -133,6 +135,5 @@ $(document).ready(function () {
 
 
     getVideo();
-
 
 });

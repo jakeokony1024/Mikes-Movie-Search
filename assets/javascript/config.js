@@ -19,7 +19,6 @@ $(document).ready(function () {
         //Geting the value of text entered in  the input box 
         var movie = $("#movie-input").val().trim();
         console.log("This is the search result: " + movie);
-        
         //Utelly API call to get the show that was searched for to see where it's streaming    
         const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' + movie + '&country=us'
         const options = {
@@ -42,7 +41,7 @@ $(document).ready(function () {
                 console.log(utellyResp.results[0].locations[0].display_name);
                 console.log(utellyResp.results[0].locations[0].url);
 
-                
+
          
              var movies = utellyResp.results
              movies.map(movie => {
@@ -50,6 +49,7 @@ $(document).ready(function () {
                          `<a href='movie.html' data-moviename='${movie.name}' class='link movieAtag rounded' target='_blank'>
                                  <div class='movieDiv float-left'>
                                          <img src='${movie.picture}' />
+
                                          <p data-name='${movie.name}' class = 'movPTitle'>${movie.name}</p>
                                         
                                  </div>
@@ -62,7 +62,25 @@ $(document).ready(function () {
       
         localStorage.setItem("storageName", movieName);
 
+                                         <p data-name='${movie.name}' class ='movPTitle'>${movie.name}</p>
+                                        
+                                 </div>
+                         </a>`;
+                 $("#movie-view").prepend(movieHtml);
+             })
+             $(document).on("click", ".movieAtag", function () {
+                movieName = localStorage.setItem("storageName",$(this).data("moviename"))
+            });
+      
+        localStorage.setItem("storageName", movieName);
+
             });
     });
 
+
+    
+
+    //================================================================================================================================    
+    //End tag for Document.Ready
 });
+

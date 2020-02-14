@@ -1,4 +1,3 @@
-
 body { 
   background: url(../Images/Capture.JPG) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -170,6 +169,7 @@ width: 930px;
   display: flex;
 }
 
+
 #footer {
   background-color: black;
   color: goldenrod;
@@ -192,10 +192,18 @@ width: 930px;
     color: goldenrod;
   }
 
+
   #container {
     max-width: 100%;
   }
 
+  #container1, #containeri {
+    max-width: 100%;
+  }
+
+  #container {
+    max-width: 100%;
+  }
   #container1, #containeri {
     max-width: 100%;
   }
@@ -218,17 +226,23 @@ width: 930px;
     max-width: 66%;
     clear: both;
   }
+  .line {
+    max-width: 55%;
+  }
+  .m-view {
+    max-width: 66%;
+    clear: both;
+  }
   .img {
     float: left;
   }
-  
   .str,
   .search,
   .release,
   .rating {
     font-size: 20px;
   }
-  
+
   img {
     display: list-item;
   }
@@ -250,7 +264,3 @@ width: 930px;
     margin-bottom: 10px;
   }
   /* End of CSS for main.html */
-
-
-}
-
