@@ -13,6 +13,6 @@ The Tech Used for the construction of this site are:
 * JQuery 
 * OMDB Api
 
-To view the contributors for the site, click [here]: https://github.com/jakeokony1024/Mikes-Movie-Search/graphs/contributors. 
+To view the contributors for the site, click [here](https://github.com/jakeokony1024/Mikes-Movie-Search/graphs/contributors). 
 
 My role for this site was to build the structure for the API calls, store data in local storage, and style and design the mobile responsiveness. 
