@@ -13,6 +13,14 @@ body {
     height: 100vh;
   }
 
+  #container {
+
+    display: flex;
+    flex-direction: column;
+   /* min-height: 100vh;*/
+  }
+  
+
 h1 {
     /* font-family: 'Rye', cursive;*/
     font-family: 'Limelight', cursive;
@@ -43,22 +51,32 @@ h1 {
 }
 
 .enter {
-    font-family: 'Limelight', cursive;
-    font-size: 50px;
-    text-shadow:
-      -1px -1px 0 #000,
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-      1px 1px 0 #000;
-    color: red;
-    margin: auto 0;
-  position: relative;
-  }
+  font-family: 'Limelight', cursive;
+  font-size: 50px;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+  color: red;
+  margin: auto 0;
+position: relative;
+background: transparent;
+border-color: transparent;
+}
 
 .image{
 position: absolute;
 top:630px;
 
+}
+
+#footer {
+  background-color: black;
+  color: goldenrod;
+  padding-top: 10px;
+  margin-top: auto;
+  
 }
 
 @media screen and (max-width: 640px){
