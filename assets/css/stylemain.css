@@ -18,29 +18,7 @@ h4 {
   display: flex;
   flex-direction: column;
 }
-/* h1 {
-    /* font-family: 'Rye', cursive;
-    font-family: 'Limelight', cursive;
-    /*font-family: 'Bungee Shade', cursive;
-    position: relative;
-    text-transform: uppercase;
-    font-size: 90px;
-    letter-spacing: 4px;
-    color:rgb(241, 207, 14);
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    }
-    .neon{
-    color: #fff;
-    text-shadow:
-      0 0 5px #fff,
-      0 0 10px #fff,
-      0 0 20px #fff,
-      0 0 40px #fffb00,
-      0 0 80px #fffb00,
-      0 0 90px #fffb00,
-      0 0 100px #fffb00,
-      0 0 120px #fffb00;
-    } */
+
 
 #input{
   color:rgb(241, 207, 14);
@@ -101,8 +79,8 @@ img{
   text-align: center;
   margin: 0 auto;
   width: auto;
- /* text-decoration: underline;*/
- color: rgb(241, 207, 25);
+  /* text-decoration: underline;*/
+  color: rgb(241, 207, 25);
 }
 
 
@@ -135,9 +113,6 @@ width: 246px;
 height: 50px;
 color: rgb(229, 228, 240);
   font-size: 24px;
-
-  
-
 }
 .release{
 float: right;
@@ -189,7 +164,7 @@ width: 930px;
     overflow: auto;
   }
   .neon {
-    font-size: 40px;
+    font-size: 20px;
     margin-bottom: 5px;
   }
   .line {
