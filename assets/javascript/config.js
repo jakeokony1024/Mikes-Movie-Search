@@ -21,14 +21,7 @@ $(document).ready(function() {
   $("#find-movie").on("click", function(event) {
     event.preventDefault();
     //Geting the value of text entered in  the input box
-    var movie = $("#movie-input")
-      .val()
-      .trim();
-    console.log("This is the search result: " + movie);
-    //Get Input and send to local storage
-    //var getInput = movie
-    //localStorage.setItem("storageName",getInput);
-
+    var movie = $("#movie-input").val().trim();
     //Utelly API call to get the show that was searched for to see where it's streaming
     const url =
       "https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=" +
@@ -50,17 +43,23 @@ $(document).ready(function() {
         utellyResp = myJson;
         //Testing -Console logs to deteremine where the data fields we want are
         console.log(utellyResp);
-        console.log(utellyResp.results);
-        console.log(utellyResp.results[0].name);
-   
+        // console.log(utellyResp.results);
+        // console.log(utellyResp.results[0].name);
         var movies = utellyResp.results;
+        console.log(utellyResp.results);
         movies.map(movie => {
+          if(movie.picture == null) {
+            movie.picture = './assets/images/coming-soon.jpeg'
+          }
+
           var movieHtml = 
           `<div class='search-results'>
                 <div class='movieDiv'>
                   <a href='movie.html' data-moviename='${movie.name}' class='link movieAtag rounded'>
-                    <img class='results-image' src='${movie.picture}' />
-                    <p data-name='${movie.name}' class ='movPTitle'>${movie.name}</p>
+                    <p data-name='${movie.name}' class ='movPTitle'>${movie.name}</p> 
+                    <div class='img-container'>
+                      <img class='results-image' src='${movie.picture}' />
+                    </div>
                   </a>
                 </div>
           </div>`;

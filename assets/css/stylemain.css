@@ -49,7 +49,7 @@ a, a:hover {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
+  align-items: baseline;
 }
 
 #find-movie,
@@ -58,20 +58,30 @@ a, a:hover {
   border-color: black;
   color:#de2627;
 }
-img{
-  /* max-height: 100px ; */
-  display: inline;
-  display: block;
-  margin-left: 0px;
-  margin-right: 10px;
+.image-container {
+  max-width: 250px;
+  height: 300px;
+  
+}
+.results-image{
+  height: 250px;
+  width: 250px;
+  object-fit: cover;
 }
 /*Img name displayed in the movie #movie view div*/
-.search-results {
-  height: 300px;
-  width: 250px;
-}
 .movieDiv, .results-image, .movieAtag {
   max-width: 100%;
+}
+
+.movieDiv {
+  border: 2px solid #9b0a0a;
+  box-shadow: 0px 1px 10px 3px black;
+  background: black;
+  margin: 25px 10px;
+}
+.movieDiv:hover {
+  box-shadow: 5px 5px 5px 5px black;
+  transform: scale(1.1);
 }
 
 .localName{
@@ -101,10 +111,6 @@ img{
 }
 
 .movPTitle{
-  width: 180px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   color: #9b0a0a;
 }
 .title {
