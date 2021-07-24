@@ -52,7 +52,8 @@ a, a:hover {
   align-items: center;
 }
 
-#find-movie {
+#find-movie,
+#clear {
   background-color: black;
   border-color: black;
   color:#de2627;
