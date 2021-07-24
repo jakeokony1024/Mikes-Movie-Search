@@ -2,6 +2,10 @@ body {
   text-align: center;
   font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  color:#de2627;
+}
+a, a:hover {
+  color:#de2627;
 }
 .source-image {
   background: url(../Images/backgroundImage.png) no-repeat center center fixed; 
@@ -10,37 +14,54 @@ body {
   -o-background-size: cover;
   background-size: cover;
 }
-h4 {
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  color:goldenrod;
+.clear-div {
+  min-height: 70vh;
 }
+
 #container {
   display: flex;
   flex-direction: column;
 }
-
-
+.about-text {
+  margin-bottom: 30px;
+}
+.span-text {
+  font-size: 20px;
+  font-weight: 200;
+}
 #input{
   color:rgb(241, 207, 14);
   font-size: 24px;
 }
-#movie-view{
-  color:goldenrod;
+
+#movie-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
 }
+
 #find-movie {
   background-color: black;
   border-color: black;
-  color: goldenrod;
+  color:#de2627;
 }
 img{
-  max-height: 100px ;
+  /* max-height: 100px ; */
   display: inline;
   display: block;
   margin-left: 0px;
   margin-right: 10px;
 }
 /*Img name displayed in the movie #movie view div*/
-
+.search-results {
+  height: 300px;
+  width: 250px;
+}
+.movieDiv, .results-image, .movieAtag {
+  max-width: 100%;
+}
 .container{
   width: 980px;
 }
@@ -63,7 +84,7 @@ img{
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  
+  color: #9b0a0a;
 }
 .title {
   color: rgb(241, 207, 14);
@@ -83,6 +104,10 @@ img{
   color: rgb(241, 207, 25);
 }
 
+.ellips {
+  margin-top: 40px;
+  display: flex;
+}
 
 .movie{
   color: rgb(229, 228, 240);
@@ -149,7 +174,7 @@ width: 930px;
     font-family: 'Anton', sans-serif;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     overflow: auto;
-    color: goldenrod;
+    color: #de2627;
   }
   #container {
     max-width: 100%;
@@ -186,9 +211,16 @@ width: 930px;
   img {
     display: list-item;
   }
+  .ellips {
+    display: flex;
+  }
+  
   #movie-view {
-    margin: auto;
-    width: 50%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
   }
   #movie-form{
     text-align: center;
