@@ -32,11 +32,11 @@ $(document).ready(function () {
         .then((myJson) => {
             utellyResp = (myJson);
             //Testing -Console logs to deteremine where the data fields we want are            
-        
+            console.log('response: ', utellyResp);
             //Loop through to get movie name
             for (let a = 0; a < utellyResp.results[0].locations.length; a++) {
                 console.log(utellyResp.results[0].locations[a].display_name);
-                streamUrl = utellyResp.results[0].locations[a].url
+                streamUrl = utellyResp.results[0].locations[a].url;
                 console.log(streamUrl);
                 var streamDiv = $("<div>"); //Jquery to make a Movie Div
                 streamDiv.addClass("streamDiv"); //Adding Bootstrap Class to position images
@@ -100,7 +100,7 @@ $(document).ready(function () {
 
     //YOU TUBE API TRAILERS IS WORKING!!
     //=========================================================================================================================================
-    var APIKey ="AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8"
+    var APIKey ="AIzaSyBRWS_XeKrFV0AWfl7-6lyxMgrKTwJrygI"
     // -----------------------------------------------------------------------
     function getVideo() {
       $.ajax({

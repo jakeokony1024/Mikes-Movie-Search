@@ -18,12 +18,22 @@ a, a:hover {
   min-height: 70vh;
 }
 
+.neon {
+  align-items: center;
+  box-shadow: 0px 1px 10px 3px;
+  border: 2px solid black;
+}
+
 #container {
   display: flex;
   flex-direction: column;
 }
 .about-text {
   margin-bottom: 30px;
+}
+
+.about-text-container {
+  padding-top: 20px;
 }
 .span-text {
   font-size: 20px;
@@ -62,15 +72,25 @@ img{
 .movieDiv, .results-image, .movieAtag {
   max-width: 100%;
 }
-.container{
-  width: 980px;
-}
+
 .localName{
   color: rgb(241, 207, 14);
   font-size: 36px;
   text-align: center;
   margin: 0 auto;
 }
+
+.nav-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 15px;
+  align-items: center;
+  background: #2c2c2b;
+  border: 2px solid #0d0908;
+}
+
 
 #stream-view{
   color: rgb(241, 207, 14);
@@ -153,11 +173,12 @@ color: rgb(229, 228, 240);
 #m-view{
   width: 800px;
   margin: 0 auto;
-}
+}e
 
 .line{
   border-top: 3px solid rgb(241, 207, 14);
-width: 930px; 
+  width: 100%;
+  padding: 20px;
 }
 .p3{
   display: flex;

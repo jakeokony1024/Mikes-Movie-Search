@@ -14,7 +14,7 @@
 </head>
 
 <body class="source-image">
-    <div id="container1">
+    <div id="container">
         <div class="row nav-container">
             <div class="col">
                 <h1 class="neon"> Mike's Movie Search</h1>
@@ -23,36 +23,51 @@
                 <a href="./index.html">Search For Movies</a>
             </div>
         </div>
-        <span class="result">Search Results:</span>
-    </div>
-    <!--IMDB Infomration Movie going  here-->
-    <div class="containeri">
-        <div id="movies-view">
-        </div>
-    </div>
-   
-    <hr class="line">
-    <br>
-    <br>
-    <!--Movie Information going  here-->
-    <div class="container">
-        <div id="m-view">
-        </div>
-    </div>
+            
+        
+        <!--IMDB Infomration Movie going  here-->
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <span class="result title-span">Search Results:</span>
+                    <div id="movies-view"></div>    
+                </div>
+            </div>
+        
+            <div class="line"></div>
+            <!--Movie Information going  here-->
+            <div class="row info-container">
+                <div class="col">
+                    <div id="m-view"></div>
+                </div>
+                
+            </div>
 
-    <!---Streaming Services go here-->
-    <div class="container">
-        <div id="stream-view">
-            <p1 class="search">The Movie Is Streaming Here:</p1>
+            <!---Streaming Services go here-->
+            <div class="container">
+                <div id="stream-view">
+                    <p1 class="search">The Movie Is Streaming Here:</p1>
+                </div>
+            </div>
+            <br>
+            <!---------------------------------------------You Tube Trailer goes here--------------------------------------------------------------------------->
+            <div class="container" id="youTube">
+                <!-- We'll be dumping our YouTube Trailer in here -->
+                <div id="youTube-view"></div>
+                <iframe src=""></iframe>
+                <h3 class="search">Video Title</h3>
+            </div> 
+        </div>
+        
+        <div class="row clear-div">
+            <div class="col"></div>
+        </div>
+        <div class="row footer-container">
+            <div class="col">
+                <footer id="footer"> <span class="footer-text">&copy;Okony Web Development 2020</span></footer>
+            </div>
         </div>
     </div>
-    <br>
-    <!---------------------------------------------You Tube Trailer goes here--------------------------------------------------------------------------->
-    <div class="container" id="youTube">
-        <!-- We'll be dumping our YouTube Trailer in here -->
-        <div id="youTube-view"></div>
-        <iframe src=""></iframe>
-        <h3 class="search">Video Title</h3>
         <!--   <p class="description">Video Description<p>-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>

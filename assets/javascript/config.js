@@ -14,6 +14,10 @@ $(document).ready(function() {
   var p;
   //Sets up onclick funtion to capture the show that was search for
 
+  $("#clear").on('click', function() {
+    $("#movie-view").empty();
+  })
+
   $("#find-movie").on("click", function(event) {
     event.preventDefault();
     //Geting the value of text entered in  the input box
