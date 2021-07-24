@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("ready!")
     //Set up gobal variables
     var utellyResp;
     var name;
@@ -33,9 +32,9 @@ $(document).ready(function () {
         .then((myJson) => {
             utellyResp = (myJson);
             //Testing -Console logs to deteremine where the data fields we want are            
-            console.log(myJson)
+        
             //Loop through to get movie name
-            for (a = 0; a < utellyResp.results[0].locations.length; a++) {
+            for (let a = 0; a < utellyResp.results[0].locations.length; a++) {
                 console.log(utellyResp.results[0].locations[a].display_name);
                 streamUrl = utellyResp.results[0].locations[a].url
                 console.log(streamUrl);
@@ -47,32 +46,13 @@ $(document).ready(function () {
                 //     console.log(url)
                 var p = $("<p>").text(stream); //Setup a <p> tage for name
                 p.addClass("str")
-                // });
-                
-                // var pLink = $("<a>")
-                // pLink.attr("href", streamUrl);
-                // $(p).append(pLink);
 
                 $("#stream-view").append(p); // Appends the DIv to the movie-view section of HTML 
 
-                // failed attemp t#1
                 var streamLink = $("<br> <a href=" +streamUrl+ ">" + "click here" + "</a>");
                 $(".str").append(streamLink);
 
-                //failed attempt #2
-                // var streamLink = streamUrl
-                //     streamLink.map(streamUrl => {
-                //     var streamHtml = 
-                //         `<a href ='streamUrl'>
-                //             <div class= 'streamDiv'>
-                //                 <p class='str'> ${streamUrl} </p>
-                //             </div>
-                //         </a>`;
-                //     $("#stream-view").append(streamHtml);
-                // });
-
             }
-
         });
     //   http://www.omdbapi.com/?i=tt3896198&apikey=bbe0873c
     //===========================================================================================================
@@ -89,31 +69,27 @@ $(document).ready(function () {
         // Storing the plot
         var plot = response.Plot;
         // Creating an element to hold the plot
-        var pThree = $("<p>").text("Plot: " + plot);
+        var pThree = $("<p class='plot'>").text("Plot: " + plot);
         // Appending the plot
-        pThree.addClass("plot");
         movieDiv.append(pThree);
         //Creating a Div for the Rating, Image and Release
         var mviewDiv = $("<div class='m-view'>");
         // Storing the rating data
         var rating = response.Rated;
         // Creating an element to have the rating displayed
-        var pOne = $("<p>").text("Rating: " + rating);
-        pOne.addClass("rating")
+        var pOne = $("<p class='rating'>").text("Rating: " + rating);
         // Displaying the rating
         mviewDiv.append(pOne);
         // Storing the release year
         var released = response.Released;
         // Creating an element to hold the release year 
-        var pTwo = $("<p>").text("Released: " + released);
-        pTwo.addClass("release")
+        var pTwo = $("<p class='release'>").text("Released: " + released);
         //Displaying the release year
         mviewDiv.append(pTwo);
         // Retrieving the URL for the image
         var imgURL = response.Poster;
         // Creating an element to hold the image
-        var image = $("<img>").attr("src", imgURL);
-        image.addClass("img")
+        var image = $("<img class='img'>").attr("src", imgURL);
         // Appending the image
         mviewDiv.append(image);
         // Putting the information in the DIVS
@@ -131,7 +107,7 @@ $(document).ready(function () {
         type: 'GET',
         url: 'https://www.googleapis.com/youtube/v3/search',
         data: {
-            key: 'AIzaSyBBhRn34PTtR-EyygLxeptxYiPc9ThiQr8',
+            key: APIKey,
             q: moviename + "trailer",
             part: 'snippet',
             maxResults: 1,

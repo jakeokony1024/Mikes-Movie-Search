@@ -9,25 +9,66 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye|Anton&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/stylemain.css">
+
     <title>MIKE'S MOVIE SEARCH</title>
 </head>
 
-<body>
-
+<body class="source-image">
+    <!-- Nav Bar HTML -->
     <div id="container">
-        <h1> Mike's Movie Search</h1>
-   
-        <a href="main.html"><button class="w3-button w3-xxxlarge enter">ENTER</button></a>
-   
+        <div class="row nav-container">
+            <div class="col">
+                <h1 class="neon"> Mike's Movie Search</h1>
+            </div>
+            <div class="col">
+                <a href="./index.html">Search For Movies</a>
+            </div>
+        </div>
+        <div class="row about-text-container">
+            <div class="col">
+                <p class="about-text">
+                    Welcome to Mikes Movie Search, where you can find where your favorite movie or TV show is streaming!
+                </p>
+                <span class="about-text">Happy Searching!</span>
+            </div>
+        </div>
+        <div class="row form-container">
+            <div class="col">
+                <form id="movie-form" action="display.html" method="GET">
+                    <div class="row">
+                        <div class="col">
+                            <label for="movie-input" name="serial number"id="input">Search for a TV Show Or Movie</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="text" id="movie-input">
+                            <!-- This button will trigger our AJAX call -->
+                            <input id="find-movie" type="submit" value="Search">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="container ellips">
+                    <div id="movie-view">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row clear-div">
+            <div class="col"></div>
+        </div>
+        <div class="row footer-container">
+            <div class="col">
+                <footer id="footer"> &copy;BootCampSpot: Group C </footer>
+            </div>
+        </div>
     </div>
-
-  
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-     <script src="./assets/javascript/config.js"></script>
-
+    <script src="./assets/javascript/config.js"></script>
 </body>
-
 </html>

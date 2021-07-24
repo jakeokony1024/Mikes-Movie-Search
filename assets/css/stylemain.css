@@ -1,29 +1,27 @@
 body { 
-  background: url(../Images/Capture.JPG) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   text-align: center;
   font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
+.source-image {
+  background: url(../Images/backgroundImage.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 h4 {
-  font-family: 'Anton', sans-serif;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   color:goldenrod;
 }
 #container {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  width:  980px;
-  margin:0 auto;
 }
-h1 {
-    /* font-family: 'Rye', cursive;*/
+/* h1 {
+    /* font-family: 'Rye', cursive;
     font-family: 'Limelight', cursive;
-    /*font-family: 'Bungee Shade', cursive;*/
+    /*font-family: 'Bungee Shade', cursive;
     position: relative;
     text-transform: uppercase;
     font-size: 90px;
@@ -42,7 +40,7 @@ h1 {
       0 0 90px #fffb00,
       0 0 100px #fffb00,
       0 0 120px #fffb00;
-    }
+    } */
 
 #input{
   color:rgb(241, 207, 14);
