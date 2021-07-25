@@ -13,7 +13,6 @@ $(document).ready(function() {
   var movieDiv = $("#movie-view");
   var p;
   //Sets up onclick funtion to capture the show that was search for
-
   $("#clear").on('click', function() {
     $("#movie-view").empty();
   })

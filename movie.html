@@ -8,9 +8,7 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Limelight|Rye&display=swap" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="./assets/css/stylemain.css">
-
-
-<title>MIKE'S MOVIE SEARCH</title>
+<title>MikesMovieSearch</title>
 </head>
 
 <body class="source-image">
@@ -27,48 +25,39 @@
         
         <!--IMDB Infomration Movie going  here-->
         <div class="container">
-            <div class="row">
-                <div class="col">
-                    <span class="result title-span">Search Results:</span>
+            <div class="row movie-container">
+                <div class="col-6">
                     <div id="movies-view"></div>    
                 </div>
-            </div>
-        
-            <div class="line"></div>
-            <!--Movie Information going  here-->
-            <div class="row info-container">
-                <div class="col">
-                    <div id="m-view"></div>
+                <div class="col-6">
+                    <div class="row content">
+                        <div class="row stream-container">
+                            <div class="col">
+                                <div id="stream-view">
+                                    <p1 class="search">The Movie Is Streaming Here:</p1>
+                                </div>     
+                            </div>
+                        </div>
+                        <div class="row yt-container" id="youTube">
+                            <div class="col">
+                                <div id="youTube-view"></div>
+                                <iframe src=""></iframe>
+                                <h3 class="search">Video Title</h3>    
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
             </div>
-
-            <!---Streaming Services go here-->
-            <div class="container">
-                <div id="stream-view">
-                    <p1 class="search">The Movie Is Streaming Here:</p1>
-                </div>
-            </div>
-            <br>
-            <!---------------------------------------------You Tube Trailer goes here--------------------------------------------------------------------------->
-            <div class="container" id="youTube">
-                <!-- We'll be dumping our YouTube Trailer in here -->
-                <div id="youTube-view"></div>
-                <iframe src=""></iframe>
-                <h3 class="search">Video Title</h3>
-            </div> 
-        </div>
-        
+        </div>     
         <div class="row clear-div">
             <div class="col"></div>
         </div>
-        <div class="row footer-container">
-            <div class="col">
-                <footer id="footer"> <span class="footer-text">&copy;Okony Web Development 2020</span></footer>
-            </div>
+    </div>
+    <div class="row footer-container">
+        <div class="col">
+            <footer id="footer"> <span class="footer-text">&copy;Okony Web Development 2020</span></footer>
         </div>
     </div>
-        <!--   <p class="description">Video Description<p>-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"
             integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
         <script type="text/javascript"></script>
