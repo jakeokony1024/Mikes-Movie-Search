@@ -85,6 +85,7 @@ a, a:hover {
 .movie-container {
   display: flex;
   flex-direction: row;
+  margin-top: 30px;
 }
 
 .movieDiv {
@@ -116,7 +117,6 @@ a, a:hover {
   border: 2px solid #0d0908;
 }
 
-
 #stream-view{
   display: flex;
   flex-direction: column;
@@ -124,6 +124,10 @@ a, a:hover {
   font-size: 28px;
   text-align: center;
   margin: 0 auto;
+}
+.movie-details{
+  background: rgb(13, 9, 8, 0.9);
+  color: #9b0a0a;
 }
 
 .movPTitle{
