@@ -28,19 +28,12 @@ $(document).ready(function () {
         })
         .then((myJson) => {
             utellyResp = (myJson);
-            //Testing -Console logs to deteremine where the data fields we want are            
-            console.log('Utelly response: ', utellyResp);
-            //Loop through to get movie name
+
             for (let a = 0; a < utellyResp.results[0].locations.length; a++) {
-                console.log(utellyResp.results[0].locations[a].display_name);
                 streamUrl = utellyResp.results[0].locations[a].url;
-                console.log(streamUrl);
                 let streamDiv = $("<div>"); //Jquery to make a Movie Div
                 streamDiv.addClass("streamDiv"); //Adding Bootstrap Class to position images
                 let stream = utellyResp.results[0].locations[a].display_name; //Loop through UTELLY Json to get movie name                   
-                console.log(utellyResp.results)
-                // utellyResp.results[0].forEach(url => {
-                //     console.log(url)
                 let p = $("<p>").text(stream); //Setup a <p> tage for name
                 p.addClass("str")
                 $("#stream-view").append(p); // Appends the DIv to the movie-view section of HTML 
@@ -51,12 +44,10 @@ $(document).ready(function () {
     //===========================================================================================================
     let queryURL = "https://www.omdbapi.com/?t=" + moviename + "&apikey=bbe0873c";
 
-    // Creating an AJAX call for IMDB
     $.ajax({
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        console.log("OMDB Response: ",response);
         let title = response.Title;
         let plot = response.Plot;
         let rating = response.Rated;
@@ -77,7 +68,6 @@ $(document).ready(function () {
             </div>
         `; 
         $("#movies-view").html(movieDiv);
-        // $("#m-view").prepend(mviewDiv);
     });
     let APIKey ="AIzaSyBRWS_XeKrFV0AWfl7-6lyxMgrKTwJrygI"
     function getVideo() {
@@ -94,11 +84,11 @@ $(document).ready(function () {
         },
         success: function(data){
             embedVideo(data)
-            console.log("You Tube Data: ",data);
+            // console.log("You Tube Data: ",data);
         },
         error: function(response){
             console.log("Request Failed");
-            console.log(response);
+            // console.log(response);
         }
     });
     }

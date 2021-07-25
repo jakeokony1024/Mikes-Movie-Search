@@ -1,6 +1,5 @@
 //Jquery Document.Ready function
 $(document).ready(function() {
-  console.log("ready!");
   //Set up gobal variables
 
   var utellyResp;
@@ -41,17 +40,11 @@ $(document).ready(function() {
       })
       .then(myJson => {
         utellyResp = myJson;
-        //Testing -Console logs to deteremine where the data fields we want are
-        console.log(utellyResp);
-        // console.log(utellyResp.results);
-        // console.log(utellyResp.results[0].name);
         var movies = utellyResp.results;
-        console.log(utellyResp.results);
         movies.map(movie => {
           if(movie.picture == null) {
             movie.picture = './assets/images/coming-soon.jpeg'
           }
-
           var movieHtml = 
           `<div class='search-results'>
                 <div class='movieDiv'>
@@ -71,7 +64,6 @@ $(document).ready(function() {
             $(this).data("moviename")
           );
         });
-
         localStorage.setItem("storageName", movieName);
       });
   });
