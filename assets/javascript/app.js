@@ -4,17 +4,21 @@ $(document).ready(function () {
     var name;
     var streamUrl;
     //Getting the name from local storage
+    let moviename = (localStorage.getItem("storageName"));
+    // //Create structure for displaying movie name
+    // var titleDiv = $("<div>"); //Jquery to make a Movie Div
+    // titleDiv.addClass("titleDiv"); //Adding Bootstrap Class to position images
+    // var p = $("<p>").text(moviename); //Setup a <p> tage for name
+    // p.addClass("title");
+    // $("#title-view").prepend(p); // Appends the DIv to the movie
+    //$(".result").append(titleDiv);
 
-    // console.log(localStorage.getItem("movieName"));
-    let moviename = (localStorage.getItem("storageName"))
-
-    //Create structure for displaying movie name======================================================
-    var titleDiv = $("<div>"); //Jquery to make a Movie Div
-    titleDiv.addClass("titleDiv"); //Adding Bootstrap Class to position images
-    var p = $("<p>").text(moviename); //Setup a <p> tage for name
-    p.addClass("title");
-    $("#title-view").prepend(p); // Appends the DIv to the movie
-    $(".result").text("  " + moviename);
+    let titleDiv = `
+        <div class='titleDiv'>
+            <p class='title'>${moviename}<p>
+        </div>
+    `;
+    $(".result").append(titleDiv);
     //================================================================================================================================     
     //Utelly API call to get the show that was searched for to see where it's streaming    
     const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' + moviename + '&country=us'

@@ -10,7 +10,7 @@ $(document).ready(function() {
   var picture;
   var movieName;
   var movieAtag;
-  var movieDiv;
+  var movieDiv = $("#movie-view");
   var p;
   //Sets up onclick funtion to capture the show that was search for
 
@@ -20,6 +20,7 @@ $(document).ready(function() {
 
   $("#find-movie").on("click", function(event) {
     event.preventDefault();
+    $("#movie-view").empty();
     //Geting the value of text entered in  the input box
     var movie = $("#movie-input").val().trim();
     //Utelly API call to get the show that was searched for to see where it's streaming
