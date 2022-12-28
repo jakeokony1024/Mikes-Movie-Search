@@ -1,8 +1,10 @@
 $(document).ready(function () {
-    //Set up gobal letiables
+    //Set up gobal variables
     let utellyResp;
-    let name;
-    let streamUrl;
+    let correctResponse;
+    let linkLocation = $("#link-location");
+    let linkHTML;
+
     //Getting the name from local storage
     let moviename = (localStorage.getItem("storageName"));
     let titleDiv = `
@@ -11,7 +13,7 @@ $(document).ready(function () {
         </div>
     `;
     $(".result").append(titleDiv);
-    //================================================================================================================================     
+    //==================================================================================================================
     //Utelly API call to get the show that was searched for to see where it's streaming    
     const url = 'https://utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com/lookup?term=' 
     + moviename + '&country=us';
@@ -27,18 +29,24 @@ $(document).ready(function () {
             return response.json();
         })
         .then((myJson) => {
-            utellyResp = (myJson);
+            utellyResp = myJson;
+            // console.log('response',utellyResp);
+            let results = utellyResp.results;
 
-            for (let a = 0; a < utellyResp.results[0].locations.length; a++) {
-                streamUrl = utellyResp.results[0].locations[a].url;
-                let streamDiv = $("<div>"); //Jquery to make a Movie Div
-                streamDiv.addClass("streamDiv"); //Adding Bootstrap Class to position images
-                let stream = utellyResp.results[0].locations[a].display_name; //Loop through UTELLY Json to get movie name                   
-                let p = $("<p>").text(stream); //Setup a <p> tage for name
-                p.addClass("str")
-                $("#stream-view").append(p); // Appends the DIv to the movie-view section of HTML 
-                let streamLink = $("<br> <a href=" +streamUrl+ ">" + "click here" + "</a>");
-                $(".str").append(streamLink);
+            for(let i = 0; i < results.length; i++) {
+                let result = results[i];
+                if (result.name === moviename) correctResponse = result;
+            }
+
+            let locations = correctResponse.locations;
+            for(let i = 0; i < locations.length; i++) {
+                let location = locations[i];
+                linkHTML = `
+                        <div>
+                            <h1 class="title">${location.display_name}</h1>
+                            <a href="${location.url}" target="_blank"><span class="str">Click Here</span></a>
+                        </div>`;
+                linkLocation.append(linkHTML);
             }
         });
     //===========================================================================================================
@@ -93,8 +101,8 @@ $(document).ready(function () {
     });
     }
     function embedVideo(data) {
-    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId);
-    $('iframe').addClass('you-tube-video');
+    $('iframe').attr('src', 'https://www.youtube.com/embed/' + data.items[0].id.videoId).addClass('you-tube-video');
+    // $('iframe').addClass('you-tube-video');
     $('h3').text(data.items[0].snippet.title);
     $('.description').text(data.items[0].snippet.description);
 }

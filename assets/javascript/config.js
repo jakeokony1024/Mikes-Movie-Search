@@ -46,25 +46,23 @@ $(document).ready(function() {
             movie.picture = './assets/images/coming-soon.jpeg'
           }
           var movieHtml = 
-          `<div class='search-results'>
-                <div class='movieDiv'>
-                  <a href='movie.html' data-moviename='${movie.name}' class='link movieAtag rounded'>
-                    <p data-name='${movie.name}' class ='movPTitle'>${movie.name}</p> 
-                    <div class='img-container'>
-                      <img class='results-image' src='${movie.picture}' />
+          `<div class="search-results">
+                <div class="movieDiv">
+                  <a href='movie.html' data-moviename="${movie.name}" class="link movieAtag rounded">
+                    <p data-name="${movie.name}" class ="movPTitle">${movie.name}</p> 
+                    <div class="img-container">
+                      <img class="results-image" src='${movie.picture}' />
                     </div>
                   </a>
                 </div>
           </div>`;
-          $("#movie-view").prepend(movieHtml);
+          $("#movie-view").append(movieHtml);
         });
         $(document).on("click", ".movieAtag", function() {
-          movieName = localStorage.setItem(
-            "storageName",
-            $(this).data("moviename")
-          );
+          movieName = $(this).data("moviename");
+          localStorage.setItem("storageName", movieName);
         });
-        localStorage.setItem("storageName", movieName);
+
       });
   });
   //End tag for Document.Ready
