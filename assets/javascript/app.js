@@ -42,7 +42,7 @@ $(document).ready(function () {
             for(let i = 0; i < locations.length; i++) {
                 let location = locations[i];
                 linkHTML = `
-                        <div>
+                        <div class="link-div">
                             <h1 class="title">${location.display_name}</h1>
                             <a href="${location.url}" target="_blank"><span class="str">Click Here</span></a>
                         </div>`;

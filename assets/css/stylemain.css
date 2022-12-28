@@ -48,6 +48,23 @@ a, a:hover {
   font-size: 20px;
   font-weight: 200;
 }
+
+.str {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.link-div {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.link-div > h1  {
+  margin-right: 15px;
+}
 #input{
   color:rgb(241, 207, 14);
   font-size: 24px;
@@ -137,15 +154,12 @@ a, a:hover {
   color: rgb(241, 207, 14);
   font-size: 28px;
   text-align: center;
-  margin: 0 auto;
   width: auto;
 }
 .search{
-  text-shadow: -2px black, 0 1.5px black, 2px 0 black , 0 -1.5px black;
-
   font-size: 28px;
   text-align: center;
-  margin: 0 auto;
+  margin: 30px 0;
   width: auto;
   /* text-decoration: underline;*/
   color: rgb(241, 207, 25);
@@ -169,12 +183,7 @@ margin: 0 auto;
   text-align: center;
   margin: 0 auto;
 }
-#stream-view{
-  color: rgb(241, 207, 14);
-  font-size: 36px;
-  text-align: center;
-  margin: 0 auto;
-}
+
 
 .content,
 .stream-container {
@@ -256,11 +265,17 @@ color: rgb(229, 228, 240);
   .img {
     float: left;
   }
-  .str,
+
+  .str {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+
   .search,
   .release,
   .rating {
     font-size: 20px;
+    margin: 10px 0;
   }
   img {
     display: list-item;
