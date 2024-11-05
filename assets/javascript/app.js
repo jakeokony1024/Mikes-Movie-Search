@@ -21,7 +21,7 @@ $(document).ready(function () {
         method: 'GET',
         headers: {
             "x-rapidapi-host": "utelly-tv-shows-and-movies-availability-v1.p.rapidapi.com",
-            "x-rapidapi-key": "dfb87b0ec6msh548e75d6f762a4bp1dc2f1jsn322c78d86502"
+            "x-rapidapi-key": "f4722b4302msh0829d55a41299bbp1fe1e4jsn57d89902c244"
         },
     }
     fetch(url, options)
